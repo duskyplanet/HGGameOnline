@@ -1,0 +1,52 @@
+var GameInfo = require("../../basicGameInfo/GameInfo");
+var hjcArr = require("../../../HJCUtils/HJCArray");
+var PlayerInfo = require("../../gameLogic/player").info;
+var endPrinter = require("../printManager/endPrinter").endPrinter;
+
+exports.endChecker = endChecker;
+function endChecker(game){
+    var ttlNum = game.runningInfo.ttlPlyrNum;
+    var survivals = game.runningInfo.quickArr.survivals;
+    var survNum = survivals.length;
+    var gstNum = game.runningInfo.quickArr.survGstNum;
+    var hmnNum = game.runningInfo.quickArr.survHmnNum;
+    var alnNum = game.runningInfo.quickArr.survAlnNum;
+    this.testPrinter = function(ttlNum,survivals,survNum,gstNum,hmnNum,alnNum){
+        console.log("============endCheker做了一次结束检查：======");
+        console.log("玩家总人数："+ttlNum);
+        console.log("当前存活"+survNum+"人："+survivals);
+        console.log("其中，人："+hmnNum+",鬼："+gstNum+",外星人："+alnNum);
+        console.log("=============================================");
+    };
+    //检查平局
+    //this.testPrinter(ttlNum,survivals,survNum,gstNum,hmnNum,alnNum);
+    if(game.runningInfo.timeInfo.leftEvenStep<=0) {
+        if (alnNum > 0) {
+            //外星人胜利
+            endPrinter(GameInfo.EndInfo.THD,game);
+            return true;
+        } else {
+            endPrinter(GameInfo.EndInfo.EVE,game);
+            return true;
+        }
+    }
+    if(alnNum!=0){
+        var victoryNum = Math.floor(ttlNum/2);
+        if(survNum<=victoryNum){
+            //外星人胜利
+            endPrinter(GameInfo.EndInfo.THD,game);
+        }else{
+            return false;
+        }
+    }else{
+        if(survivals.length <= 0) {
+            endPrinter(GameInfo.EndInfo.EVE,game);return true;
+        }else if(hmnNum <=0 ){
+            endPrinter(GameInfo.EndInfo.GST,game);return true;
+        }else if(gstNum <=0 ){
+            endPrinter(GameInfo.EndInfo.HMN,game);return true;
+        }else{
+            return false;
+        }
+    }
+}

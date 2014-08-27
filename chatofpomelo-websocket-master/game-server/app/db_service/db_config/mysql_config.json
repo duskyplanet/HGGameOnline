@@ -1,0 +1,8 @@
+{
+    "host":"localhost",
+    "user":"root",
+    "password": "hjc123",
+    "database":"hggame",
+    "port": 3306,
+    "debug":false
+}
