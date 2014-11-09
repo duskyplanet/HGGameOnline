@@ -465,15 +465,20 @@ function isEmpty(obj){
  * @params: array 对象数组
  * */
 exports.shuffle = shuffle;
-function shuffle(array){
-    if(!isEmpty(array)){
-        for(var i = array.length - 1; i; i--){
-            var temp, random = parseInt(Math.random() * i);
-            temp = array[i];
-            array[i] = array[random];
-            array[random] = temp;
+function shuffle(aArr){
+    var iLength = aArr.length,
+        i = iLength,
+        mTemp,
+        iRandom;
+
+    while(i--){
+        if(i !== (iRandom = Math.floor(Math.random() * iLength))){
+            mTemp = aArr[i];
+            aArr[i] = aArr[iRandom];
+            aArr[iRandom] = mTemp;
         }
     }
+    return aArr;
 }
 
 /**对象数组颠倒（影响原数组，无返回值）
