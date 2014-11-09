@@ -22,7 +22,7 @@ function regUser(params,callback){
                     var defaultMoney = 100;
                     var defaultVip = 0;
                     var sqlParmas =[params.name,params.pswd,params.nick,params.email,params.inviCode,params.phone,
-                        "",defaultScore,defaultLevel,params.gender,'新兵',defaultMoney,defaultVip]
+                        params.avatar,defaultScore,defaultLevel,params.gender,'新兵',defaultMoney,defaultVip]
                     dao.reg(sqlParmas,function(err,suc){
                         if(err){
                             callback({code:201,info:"对不起，暂时无法注册"});

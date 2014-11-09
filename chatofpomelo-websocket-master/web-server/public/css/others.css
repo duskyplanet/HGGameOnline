@@ -1,0 +1,158 @@
+﻿#rules_container{
+    width: 950px;
+    height: 970px;
+    margin: auto;
+    overflow: auto;
+}
+
+.rules_btn{
+    position: relative;
+    background: url('../images/others/rules_buttons.png') no-repeat;
+    height: 35px;
+    width: 125px;
+    cursor:pointer;
+    margin-left: -25px;
+    top:-6px;
+}
+
+.rules_line{
+    margin-left: 25px;
+    width: 920px;
+    height: 20px;
+    overflow: visible;
+    background-color: #552299;
+    margin-top: 15px;
+}
+
+.rules_content{
+    margin-top: 15px;
+    border: solid #eeeeee 1px;
+    padding: 10px;
+    display: none;
+    font-size: 16px;
+    color:#eeeeee;
+    background-color: #441166;
+    white-space: nowrap;
+}
+.rules_content p{
+    white-space: pre-wrap;
+}
+
+
+#rules_pic{
+    background: url('../images/others/rule_word.gif');
+    height: 276px;
+    width: 441px;
+    border: solid #ffffff 2px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#rules_word{
+    margin:  20px 20px 0 20px;
+    display: inline-block;
+    width: 441px;
+}
+
+#rules_pix{
+    background: url('../images/others/rules_pix.png');
+    width: 443px;
+    height: 110px;
+}
+
+.rules_line.active{
+    background-color: #9944ff;
+}
+
+#rules_identity_btn{
+    background-position: 0 0;
+}
+#rules_identity_btn:hover{
+    background-position: -132px 0;
+}
+#rules_course_btn{
+    background-position: 0 -37px;
+}
+#rules_course_btn:hover{
+    background-position: -132px -37px;
+}
+#rules_resultJdg_btn{
+    background-position: 0 -74px;
+}
+#rules_resultJdg_btn:hover{
+    background-position: -132px -74px;
+}
+#rules_ngtMove_btn{
+    background-position: 0 -113px;
+}
+#rules_ngtMove_btn:hover{
+    background-position: -132px -113px;
+}
+#rules_other_btn{
+    background-position: 0 -151px;
+}
+#rules_other_btn:hover{
+    background-position: -132px -151px;
+}
+
+/** index page **/
+.mainPage{
+    height: 980px;
+}
+.index_page{
+    background-color: #441069;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    color :#eeeeee;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-right: 6px;
+    text-align: center;
+}
+.game_ad{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 940px;
+    height: 250px;
+}
+.game_entry{
+    margin-left: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+}
+.game_notice{
+    display: inline-block;
+    width: 200px;
+    height: 400px;
+}
+.game_operation{
+    display: inline-block;
+    width: 418px;
+    height: 400px;
+    white-space: nowrap;
+}
+.game_communication{
+    margin-left: 5px;
+    display: inline-block;
+    width: 355px;
+    height: 400px;
+    white-space: nowrap;
+}
+.game_exp{
+    display: inline-block;
+    width: 360px;
+    height: 400px;
+    white-space: nowrap;
+}
+.game_rank{
+    display: inline-block;
+    width: 200px;
+    height: 400px;
+    white-space: nowrap;
+}
+.game_shop{
+    width: 938px;
+    height: 400px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

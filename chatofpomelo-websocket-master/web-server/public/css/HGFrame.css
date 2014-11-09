@@ -1,0 +1,115 @@
+﻿.HGGame_head{
+    min-width:1000px;
+    height: 190px
+    text-align: center;
+    background-color: #180038;
+}
+.logo{
+    display: block;
+    width: 583px;
+    height: 150px;
+    margin: auto;
+    background: url('../images/background/logo.png') no-repeat center;
+}
+.head_back{
+    position: absolute;
+    top:0;
+    z-index: -1;
+    display: block;
+    height: 150px;
+    width: 100%;
+    background: url('../images/background/headBack.png') no-repeat center;
+}
+.cloud{
+    position: absolute;
+    top:0;
+    left:800px;
+    z-index: 2;
+    display: block;
+    height: 150px;
+    width: 1015px;
+    background: url('../images/background/cloud.png') no-repeat center;
+}
+.navigation{
+    min-width:1000px;
+    height: 40px;
+    margin: auto;
+    background-color: #220044;
+    font-weight: 500;
+    color:#9955bb;
+    border: solid #9955bb 1px;
+}
+.navigation ul{
+    width:1000px;
+    margin: auto;
+}
+.navigation li{
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    margin: 3px 10px 3px 0;
+    font-size: 18px;
+    padding-top: 4px;
+}
+.navigation li.active{
+    /*background-color: #180033 ;*/
+    background-color: #8900ab;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    color:#ddaaff;
+    font-weight: 700;
+}
+.navigation li:hover{
+    background-color: #440077;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+}
+.channel{
+     display: none;
+     height: 1000px;
+     padding:10px;
+     color:#ffffff;
+     font-size: 18px;
+ }
+
+.mainPage{
+    overflow: auto;
+}
+.HGGame_foot{
+    min-width:1000px;
+    height: 50px;
+    border: solid #9955bb 1px;
+    text-align: center;
+}
+.HGGame_foot p{
+    color: #eeeeee;
+}
+
+.HGGame_container{
+    width:998px;
+    margin: auto;
+    height: 1000px;
+    background-color: #220044 ;
+    border-left: solid #9955bb 1px;
+    border-right:  solid #9955bb 1px;
+}
+
+/**游戏背景介绍*/
+#backgroundContent{
+    margin: 30px;
+    font-size: 20px;
+    white-space: pre-wrap;
+    color: #ffffff;
+}
+
+#backgroundContent .red{
+    color:#ff0000;
+    font-size: 20px;
+    font-weight: 500;
+}
+#gameIntros{
+    margin: 30px;
+    font-size: 20px;
+    white-space: pre-wrap;
+    color:#eeaaff;
+}

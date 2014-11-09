@@ -1,99 +1,159 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>
-            chatofpomelo
-        </title>
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <script src="js/lib/jquery-1.8.0.min.js" type="text/javascript">
-        </script>
+<head>
+    <title>人鬼殊途Online</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/HGFrame.css">
+    <link rel="stylesheet" type="text/css" href="css/jobs.css">
+    <link rel="stylesheet" type="text/css" href="css/others.css">
+</head>
+<body>
 
-        <script src="js/lib/build/build.js" type="text/javascript">
+<div class="HGGame_head">
+    <span class="logo"></span>
+    <span class="head_back"></span>
+    <span class="cloud"></span>
+    <div class="navigation">
+       <ul>
+           <li class="active">首页</li>
+           <li>背景介绍</li>
+           <li>游戏规则</li>
+           <li>职业全解</li>
+           <li>积分&出镜</li>
+           <li>高手进阶</li>
+           <li>游戏论坛</li>
+       </ul>
+    </div>
+</div>
 
-        </script>
-        <script type="text/javascript">
-         
-         require('boot');
-        </script> 
-        <script src="js/client.js">
-                		
-        </script>
-        <script src="js/pop.js" type="text/javascript">
-
-        </script>
-    </head>
-    
-    <body>
-        <div id="app">
-            <div id="loginView">
-                <div id="loginTitle">
-                    Chat of Pomelo
-                </div>
-                <table>
-                    <tr>
-                        <td>
-                            <input id="loginUser" type="text" placeholder="enter your name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input name="channels" type="text" id="channelList" placeholder="enter your channel"
-                            />
-                        </td>
-                        <tr>
-                            <td>
-                                <input id="login" type='button' value="join" />
-                            </td>
-                        </tr>
-                </table>
-                <div id="loginError">
-                </div>
+<div class="HGGame_container">
+    <div class="mainPage channel active">
+        <div class="index_page game_ad">游戏轮播广告位（空）
+		</div>
+        <div class="index_page game_entry">游戏入口-登陆注册（空）</div>
+        <div class="index_page game_notice">游戏新闻公告位（空）</div>
+        <div class="index_page game_operation">游戏操作指南（空）</div>
+        <div class="index_page game_communication">游戏交流群（空）</div>
+        <div class="index_page game_exp">玩家经验（空）</div>
+        <div class="index_page game_rank">积分排行榜（空）</div>
+        <div class="index_page game_shop">道具商城</div>
+    </div>
+    <div class="gameBackground channel">
+        <div id="backgroundContent"></div>
+        <hr/>
+        <div id="gameIntros"></div>
+    </div>
+    <div class="gameRule channel">
+        <div id="rules_container">
+            <div class="rules_line">
+                <div class="rules_btn" id="rules_identity_btn"></div>
             </div>
-            <div id="chatHistory">
+            <div class="rules_content" id="rules_identity">
             </div>
-            <div id="toolbar">
-                <ul id="status">
-                    <li>
-                        users:
-                        <select name="users" id="usersList">
-                            <option value="*">
-                                all
-                            </option>
-                        </select>
-                    </li>
-                    <li>
-                        name:
-                        <span id="name">
-                        </span>
-                    </li>
-                    <li>
-                        room:
-                        <span id="room">
-                        </span>
-                    </li>
-                </ul>
-                <input tabindex="1" type="text" id="entry" />
+            <div class="rules_line">
+                <div class="rules_btn" id="rules_course_btn"></div>
             </div>
+            <div class="rules_content"  id="rules_course">
+            </div>
+            <div class="rules_line">
+                <div class="rules_btn" id="rules_resultJdg_btn"></div>
+            </div>
+            <div class="rules_content"  id="rules_resultJdg"></div>
+            <div class="rules_line">
+                <div class="rules_btn" id="rules_ngtMove_btn"></div>
+            </div>
+            <div class="rules_content" id="rules_ngtMove"></div>
+            <div class="rules_line">
+                <div class="rules_btn" id="rules_other_btn"></div>
+            </div>
+            <div class="rules_content"  id="rules_other"></div>
         </div>
-        <div id="pop">
-            <div id="popHead">
-                <a id="popClose" title="close">Close</a>
-                <h2>
-                    Tip
-                </h2>
+    </div>
+    <div class="jobsIntro channel">
+        <div class="jobs_slider">
+            <div class="slider_button to_left"></div>
+            <div id="jobs_inner">
+                <span class="border"><span class="title" style="background-position: 0 0"></span><span class="hinter">外星人</span></span>
+                <span class="border"><span class="title" style="background-position: -60px 0"></span><span class="hinter">媚女郎</span></span>
+                <span class="border"><span class="title" style="background-position: -120px 0"></span><span class="hinter">潜行者</span></span>
+                <span class="border"><span class="title" style="background-position: -180px 0"></span><span class="hinter twoChars">间谍</span></span>
+                <span class="border"><span class="title" style="background-position: -240px 0"></span><span class="hinter">魔术师</span></span>
+                <span class="border"><span class="title" style="background-position: -300px 0"></span><span class="hinter">指挥官</span></span>
+                <span class="border"><span class="title" style="background-position: -360px 0"></span><span class="hinter">抵抗军</span></span>
+                <span class="border"><span class="title" style="background-position: -420px 0"></span><span class="hinter">大主教</span></span>
+                <span class="border"><span class="title" style="background-position: -480px 0"></span><span class="hinter">守护者</span></span>
+                <span class="border"><span class="title" style="background-position: -540px 0"></span><span class="hinter twoChars">先知</span></span>
+                <span class="border"><span class="title" style="background-position: 0 -60px"></span><span class="hinter">数学家</span></span>
+                <span class="border"><span class="title" style="background-position: -60px -60px"></span><span class="hinter">挑拨者</span></span>
+                <span class="border"><span class="title" style="background-position: -120px -60px"></span><span class="hinter">治愈者</span></span>
+                <span class="border"><span class="title" style="background-position: -180px -60px"></span><span class="hinter">机械师</span></span>
+                <span class="border"><span class="title" style="background-position: -240px -60px"></span><span class="hinter">验尸官</span></span>
+                <span class="border"><span class="title" style="background-position: -300px -60px"></span><span class="hinter">通灵师</span></span>
+                <span class="border"><span class="title" style="background-position: -360px -60px"></span><span class="hinter">大侦探</span></span>
+                <span class="border"><span class="title" style="background-position: -420px -60px"></span><span class="hinter">代言人</span></span>
+                <span class="border"><span class="title" style="background-position: -480px -60px"></span><span class="hinter">启迪者</span></span>
+                <span class="border"><span class="title" style="background-position: -540px -60px"></span><span class="hinter">音乐家</span></span>
+                <span class="border"><span class="title" style="background-position: 0 -120px"></span><span class="hinter">祈福者</span></span>
+                <span class="border"><span class="title" style="background-position: -60px -120px"></span><span class="hinter twoChars">屌丝</span></span>
+                <span class="border"><span class="title" style="background-position: -120px -120px"></span><span class="hinter twoChars">女神</span></span>
+                <span class="border"><span class="title" style="background-position: -180px -120px"></span><span class="hinter">救世主</span></span>
+                <span class="border"><span class="title" style="background-position: -240px -120px"></span><span class="hinter">仲裁者</span></span>
+                <span class="border"><span class="title" style="background-position: -300px -120px"></span><span class="hinter">搏命家</span></span>
+                <span class="border"><span class="title" style="background-position: -360px -120px"></span><span class="hinter">阴谋家</span></span>
+                <span class="border"><span class="title" style="background-position: -420px -120px"></span><span class="hinter">革命家</span></span>
+                <span class="border"><span class="title" style="background-position: -480px -120px"></span><span class="hinter">评论家</span></span>
+                <span class="border"><span class="title" style="background-position: -540px -120px"></span><span class="hinter">千面人</span></span>
+                <span class="border"><span class="title" style="background-position: 0 -180px"></span><span class="hinter">复仇者</span></span>
+                <span class="border"><span class="title" style="background-position: -60px -180px"></span><span class="hinter">殇逝者</span></span>
+                <span class="border"><span class="title" style="background-position: -120px -180px"></span><span class="hinter">引路人</span></span>
+                <span class="border"><span class="title" style="background-position: -180px -180px"></span><span class="hinter">暗语者</span></span>
+                <span class="border"><span class="title" style="background-position: -240px -180px"></span><span class="hinter twoChars">天使</span></span>
+                <span class="border"><span class="title" style="background-position: -300px -180px"></span><span class="hinter twoChars">恶魔</span></span>
+                <span class="border"><span class="title" style="background-position: -360px -180px"></span><span class="hinter twoChars">狼人</span></span>
+                <span class="border"><span class="title" style="background-position: -420px -180px"></span><span class="hinter">守财奴</span></span>
+                <span class="border"><span class="title" style="background-position: -480px -180px"></span><span class="hinter">药剂师</span></span>
+                <span class="border"><span class="title" style="background-position: -540px -180px"></span><span class="hinter">神箭手</span></span>
+                <span class="border"><span class="title" style="background-position: 0 -240px"></span><span class="hinter fourChars">御天圣母</span></span>
+                <span class="border"><span class="title" style="background-position: -60px -240px"></span><span class="hinter fourChars">鬼狱魔僧</span></span>
+                <span class="border"><span class="title" style="background-position: -120px -240px"></span><span class="hinter">驯兽师</span></span>
             </div>
-            <div id="popContent">
-                <dl>
-                    <dd id="popIntro">
-                    </dd>
-                </dl>
-                <p id="popMore">
-                    No Tip Again
-                </p>
-            </div>
+            <div class="slider_button to_right"></div>
         </div>
-    </body>
+        <div class="intros">
+            <div class="jobTitle"></div>
+            <div class="skillIntro" id="jobRule"></div>
+            <div class="skillIcon" id="basicSkillIcon"></div>
+            <div class="skillIntro" id="basicSkillIntro"></div>
+            <div class="skillIcon" id="firstSkillIcon"></div>
+            <div class="skillIntro" id="firstSkillIntro"></div>
+            <div class="skillIcon" id="secondSkillIcon"></div>
+            <div class="skillIntro" id="secondSkillIntro"></div>
+            <div class="skillIntro" id="jobForbidden"></div>
+            <div class="skillIcon" id="lightSkillIcon"></div>
+            <div class="skillIntro" id="lightSkillIntro" style="border-bottom: 0"> </div>
+        </div>
+        <div class="jobs_pix"></div>
+        <div class="jobs_intro"></div>
+        <div class="allJobs">
+            <img src="./images/jobs/allJobs.jpg"/>
+        </div>
+    </div>
+    <div class="scoreAndPix channel">积分&出镜-尚未添加内容</div>
+    <div class="improve channel">高手进阶-尚未添加内容</div>
+    <div class="bbs channel">游戏论坛-尚未添加内容</div>
+</div>
 
+<div class="HGGame_foot">
+    <div class ="foot_content">
+        <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+        <p>开发者联系方式：QQ 510236618 Tel 15821080740</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/JQ.js"></script>
+<script type="text/javascript" src="js/frame.js"></script>
+<script type="text/javascript" src="js/gameInfo.js"></script>
+<script type="text/javascript" src="js/effects.js"></script>
+<script type="text/javascript" src="js/ruleAndIntro.js"></script>
+</body>
 </html>

@@ -1,38 +1,38 @@
 {
     "development":{
         "connector":[
-            {"id":"connector1", "host":"127.0.0.1", "port":4050, "clientPort": 3050, "frontend": true},
-            {"id":"connector2", "host":"127.0.0.1", "port":4051, "clientPort": 3051, "frontend": true},
-            {"id":"connector3", "host":"127.0.0.1", "port":4052, "clientPort": 3052, "frontend": true}
+            {"id":"connector1", "host":"10.101.145.198", "port":4050, "clientPort": 3050, "frontend": true},
+            {"id":"connector2", "host":"10.101.145.198", "port":4051, "clientPort": 3051, "frontend": true},
+            {"id":"connector3", "host":"10.101.145.198", "port":4052, "clientPort": 3052, "frontend": true}
         ],
         "room":[
-            {"id":"room1", "host":"127.0.0.1", "port":6050},
-            {"id":"room2", "host":"127.0.0.1", "port":6051},
-            {"id":"room3", "host":"127.0.0.1", "port":6052}
+            {"id":"room1", "host":"10.101.145.198", "port":6050},
+            {"id":"room2", "host":"10.101.145.198", "port":6051},
+            {"id":"room3", "host":"10.101.145.198", "port":6052}
         ],
         "gate":[
-            {"id": "gate", "host":"127.0.0.1", "clientPort": 3014, "frontend": true}
+            {"id": "gate", "host":"10.101.145.198", "clientPort": 3014, "frontend": true}
         ],
         "hall":[
-            {"id": "hall",  "host":"127.0.0.1", "port":6049}
+            {"id": "hall", "host":"10.101.145.198", "port":6049}
         ]
     },
     "production":{
         "connector":[
-            {"id":"connector1", "host":"127.0.0.1", "port":4050, "clientPort": 3050, "frontend": true},
-            {"id":"connector2", "host":"127.0.0.1", "port":4051, "clientPort": 3051, "frontend": true},
-            {"id":"connector3", "host":"127.0.0.1", "port":4052, "clientPort": 3052, "frontend": true}
+            {"id":"connector1", "host":"10.101.138.253", "port":4050, "clientPort": 3050, "frontend": true},
+            {"id":"connector2", "host":"10.101.138.253", "port":4051, "clientPort": 3051, "frontend": true},
+            {"id":"connector3", "host":"10.101.138.253", "port":4052, "clientPort": 3052, "frontend": true}
         ],
         "room":[
-            {"id":"room1", "host":"127.0.0.1", "port":6050},
-            {"id":"room2", "host":"127.0.0.1", "port":6051},
-            {"id":"room3", "host":"127.0.0.1", "port":6052}
+            {"id":"room1", "host":"10.101.138.253", "port":6050},
+            {"id":"room2", "host":"10.101.138.253", "port":6051},
+            {"id":"room3", "host":"10.101.138.253", "port":6052}
         ],
         "gate":[
-            {"id": "gate", "host":"127.0.0.1", "clientPort": 3014, "frontend": true}
+            {"id": "gate", "host":"10.101.138.253", "clientPort": 3014, "frontend": true}
         ],
         "hall":[
-            {"id": "hall",  "host":"127.0.0.1", "port":6049}
+            {"id": "hall",  "host":"10.101.138.253", "port":6049}
         ]
     }
 }

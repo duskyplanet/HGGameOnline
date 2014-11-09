@@ -27,6 +27,7 @@ handler.hlChat = function(msg, session, next) {
 	});
 };
 
+
 //测试用方法
 function printProperties(obj){
     var propertiesArr = Object.getOwnPropertyNames(obj);

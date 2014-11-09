@@ -16,7 +16,7 @@ handler.queryEntry = function(msg, session, next) {
         self:this,
         name:msg.loginName,
         pswd: msg.passWord
-    }
+    };
     service.login(logParams,function(ret){
         next(null, ret);
     })
@@ -31,8 +31,9 @@ handler.regUser = function(msg, session, next) {
         email:  msg.email,
         inviCode: msg.inviCode,
         gender: msg.gender,
-        phone: msg.phone
-    }
+        phone: msg.phone,
+        avatar : msg.avatar
+    };
     service.regUser(regParams,function(ret){
         next(null, ret);
     })

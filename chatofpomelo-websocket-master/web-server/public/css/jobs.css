@@ -1,0 +1,716 @@
+﻿.allJobs{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.jobs_slider{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.jobs_slider span{
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 21px;
+    margin-right: -2px;
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    overflow:visible;
+    border: solid 1px #8844ff;
+}
+
+.jobs_slider span.border.active{
+    border: solid 1px #FFFF00;
+}
+.jobs_slider span.border.back{
+    border: solid 1px #220044;
+}
+.jobs_slider .title{
+    margin: 0;
+    background: url('../images/jobs/job_titles.jpg') no-repeat;
+    display: block;
+    z-index: 3;
+    position: absolute;
+    border: 0;
+}
+
+.jobs_slider .highlight{
+    z-index: -1;
+    position: relative;
+    background:url('../images/background/aniBorder.gif') no-repeat;
+    width: 82px;
+    height: 82px;
+    top:-44px;
+    left:-33px;
+    border: 0;
+    float:left;
+    display: inline-block;
+}
+.jobs_slider .highlight:hover{
+    border: 0;
+}
+
+
+.jobs_slider .slider_button{
+    z-index: 10;
+    cursor: pointer;
+    top:23px;
+    position: absolute;
+    height: 40px;
+    width: 28px;
+    background:url('../images/background/hggame_buttons.png') no-repeat center;
+}
+
+.jobs_slider .to_left{
+    background-position: 0 0;
+    left: -28px;
+}
+.jobs_slider .to_left:hover{
+    background-position: 0 -40px;
+}
+.jobs_slider .to_right{
+    background-position: -28px 0;
+    left: 980px;
+}
+.jobs_slider .to_right:hover{
+    background-position: -28px -40px;
+}
+
+#jobs_inner{
+    background-color: #220044;
+    position: relative;
+    width: 4000px;
+    height: 80px;
+    z-index: 1;
+}
+
+span.hinter{
+    border: 0;
+    display: inline-block;
+    opacity: 0;
+    padding-top: 2px;
+    z-index: 20;
+    position: relative;
+    width:42px;
+    height:20px;
+    margin: 0;
+    top:40px;
+    left:17px;
+    color:#FFFF77;
+    font-size: 14px;
+    font-weight: 500;
+    float:left;
+}
+span.fourChars{
+    width:65px;
+    left:3px;
+}
+span.twoChars{
+    width:45px;
+    left:30px;
+}
+span.hinter:hover{
+    border: 0;
+}
+
+div.jobs_pix{
+    position: relative;
+    top:-850px;
+    left:17px;
+    display: none;
+    margin-top: 0;
+    height: 350px;
+    width: 450px;
+}
+
+div.jobs_intro{
+    font-size: 16px;
+    color:#ffffff;
+    position: relative;
+    top:-843px;
+    left:17px;
+    display: none;
+    margin-top: 0;
+    height: 510px;
+    width: 430px;
+    padding:10px;
+    white-space: pre-wrap;
+}
+
+div.intros{
+    position: relative;
+    top:17px;
+    left:485px;
+    display: none;
+    margin: 0;
+    height: 868px;
+    width: 475px;
+    overflow: hidden;
+}
+
+div.skillIcon{
+    position: relative;
+    left: 0;
+    height: 60px;
+    width: 475px;
+    margin-bottom:5px;
+    background-color: #220044;
+}
+div.skillIntro{
+    white-space: pre-wrap;
+    position: relative;
+    left: 0;
+    font-size: 16px;
+    width: 475px;
+    margin-bottom:20px;
+    background-color: #220044;
+    color: #ffffff;
+    border-bottom:solid 2px #777777;
+}
+span.skill{
+    display: block;
+    border: 0;
+    margin: 0;
+    width: 319px;
+    height: 60px;
+    background:url('../images/jobs/skills.jpg') no-repeat;
+}
+.jobTitle{
+    position: relative;
+    display: block;
+    border-bottom:solid 4px #ffffff;
+    margin: 0 0 20px 0;
+    width: 350px;
+    height: 90px;
+    background:url('../images/jobs/job_basicInfo.jpg') no-repeat;
+}
+/**不同技能颜色**/
+.color{
+    display: inline;
+    border: 0;
+    font-size: 16px;
+    margin: 0;
+}
+.detail{
+    font-size: 14px;
+    color: #888888;
+}
+.bold{
+    color: #888888;
+    font-size: 18px;
+    font-weight: 700;
+}
+.purple{
+    color:#bb55ff;
+}
+.darkPurple{
+    color:#9900FF;
+}
+.red{
+    color : red;
+}
+.pink{
+    color: #CC7691;
+}
+.lightYellow{
+    color: #CCCC22;
+}
+.magenta{
+    color: #ff00ff;
+}
+.blue{
+    color: #0000ff;
+}
+.skyBlue{
+    color: #55aaff;
+}
+.lightBlue{
+    color: #6666ff;
+}
+.orange{
+    color: #FF9900;
+}
+.orangeYellow{
+    color: #FFBB22;
+}
+.yellow{
+    color : #ffff00;
+}
+.lightYellow{
+    color:#FFEE88;
+}
+.green{
+    color:#00ff00;
+}
+.greenBlue{
+    color : #00ffff;
+}
+.waterGreen{
+    color:#00ffcc;
+}
+.orangeRed{
+    color : #FF6600;
+}
+.greenYellow{
+    color : #bbff00;
+}
+.darkGreen{
+    color : #009900;
+}
+.grey{
+    color: #aaaaaa;
+}
+.lightRed{
+    color:#ff5555;
+}
+.black{
+    color:#000000;
+}
+/**职业基本信息位置**/
+div.aln{
+    background-position: 0 0;
+}
+div.mgl{
+    background-position: 0 -90px;
+}
+div.ass{
+    background-position: 0 -180px;
+}
+div.spy{
+    background-position: 0 -270px;
+}
+div.mgc{
+    background-position: 0 -360px;
+}
+div.cmd{
+    background-position: 0 -450px;
+}
+div.rst{
+    background-position: 0 -540px;
+}
+div.bsp{
+    background-position: 0 -630px;
+}
+div.gdn{
+    background-position: 0 -720px;
+}
+div.fsr{
+     background-position: 0 -810px;
+}
+div.mtm{
+    background-position: 0 -900px;
+}
+div.ist{
+    background-position: 0 -990px;
+}
+div.dct{
+    background-position: 0 -1080px;
+}
+div.spl{
+    background-position: 0 -1170px;
+}
+div.cnr{
+    background-position: 0 -1260px;
+}
+div.psy{
+    background-position: 0 -1350px;
+}
+div.dtt{
+    background-position: 0 -1440px;
+}
+div.spm{
+    background-position: 0 -1530px;
+}
+div.ins{
+    background-position: 0 -1620px;
+}
+div.msc{
+    background-position: 0 -1710px;
+}
+div.bls{
+     background-position: -350px 0;
+ }
+div.lsr{
+    background-position: -350px -90px;
+}
+div.gds{
+    background-position: -350px -180px;
+}
+div.svr{
+    background-position: -350px -270px;
+}
+div.arb{
+    background-position: -350px -360px;
+}
+div.gbl{
+    background-position: -350px -450px;
+}
+div.cns{
+    background-position: -350px -540px;
+}
+div.rvl{
+    background-position: -350px -630px;
+}
+div.ctc{
+    background-position: -350px -720px;
+}
+div.tfr{
+    background-position: -350px -810px;
+}
+div.avg{
+    background-position: -350px -900px;
+}
+div.psr{
+    background-position: -350px -990px;
+}
+div.ldr{
+    background-position: -350px -1170px;
+}
+div.agt{
+    background-position: -350px -1080px;
+}
+div.agl{
+    background-position: -350px -1260px;
+}
+div.dmn{
+    background-position: -350px -1350px;
+}
+div.wwf{
+    background-position: -350px -1440px;
+}
+div.msr{
+    background-position: -350px -1530px;
+}
+div.phr{
+    background-position: -350px -1620px;
+}
+div.arc{
+    background-position: -350px -1710px;
+}
+
+div.sfz{
+    background-position: 0 -1800px;
+}
+
+div.grl{
+    background-position: 0 -1890px;
+}
+div.trn{
+    background-position: -350px -1800px;
+}
+
+span.basicKill{
+    background-position: 0 0;
+}
+span.firstKnow{
+    background-position: 0 -60px;
+}
+span.seduce{
+    background-position: 0 -120px;
+}
+span.seduceEnlighten{
+    background-position: 0 -180px;
+}
+span.assassin{
+    background-position: 0 -240px;
+}
+span.assassinEnlighten{
+    background-position: 0 -300px;
+}
+span.intelligence{
+    background-position: 0 -360px;
+}
+span.intelligenceEnlighten{
+    background-position: 0 -420px;
+}
+span.confuse{
+    background-position: 0 -480px;
+}
+span.confuseEnlighten{
+    background-position: 0 -540px;
+}
+span.authority{
+    background-position: 0 -600px;
+}
+span.authorityEnlighten{
+    background-position: 0 -660px;
+}
+span.resistance{
+    background-position: 0 -720px;
+}
+span.resistanceEnlighten{
+    background-position: 0 -780px;
+}
+/** 8、大主教-审判-无上神威**/
+span.judge{
+    background-position: 0 -840px;
+}
+span.judgeEnlighten{
+    background-position: 0 -900px;
+}
+/** 9、守护者-守卫-顶级戒备**/
+span.protect{
+    background-position: 0 -960px;
+}
+span.protectEnlighten{
+    background-position: 0 -1020px;
+}
+/** 10、先知-占卜-洞彻天眼**/
+span.predict{
+    background-position: 0 -1080px;
+}
+span.predictEnlighten{
+    background-position: 0 -1140px;
+}
+/** 11、数学家-推演-完美定律**/
+span.calculate{
+    background-position: -320px 0;
+}
+span.calculateEnlighten{
+    background-position: -320px -60px;
+}
+/** 12、挑拨者-煽动-战火无边**/
+span.provoke{
+    background-position: -320px -120px;
+}
+span.provokeEnlighten{
+    background-position: -320px -180px;
+}
+/** 13、治愈者-救赎-真爱永恒**/
+span.save{
+    background-position: -320px -240px;
+}
+span.saveEnlighten{
+    background-position: -320px -300px;
+}
+/** 14、机械师-防弹-钢筋铁骨**/
+span.proof{
+    background-position: -320px -360px;
+}
+span.proofEnlighten{
+    background-position: -320px -420px;
+}
+/** 15、验尸官-鉴定-最终遗言**/
+span.certify{
+    background-position: -320px -480px;
+}
+span.certifyEnlighten{
+    background-position: -320px -540px;
+}
+/** 16、通灵师-还魂-不死亡灵**/
+span.psychic{
+    background-position: -320px -600px;
+}
+span.psychicEnlighten{
+    background-position: -320px -660px;
+}
+/** 17、大侦探-侦查-绝对掌控**/
+span.detect{
+    background-position: -320px -720px;
+}
+span.detectEnlighten{
+    background-position: -320px -780px;
+}
+/** 18、代言人-代言-攻守无双**/
+span.represent{
+    background-position: -320px -840px;
+}
+span.representEnlighten{
+    background-position: -320px -900px;
+}
+/** 19、启迪者-启迪-潜能迸发**/
+span.enlighten{
+    background-position: -320px -960px;
+}
+span.enlightenEnlighten{
+    background-position: -320px -1020px;
+}
+/** 20、音乐家-催眠-夜曲狂奏**/
+span.hypnosis{
+    background-position: -320px -1080px;
+}
+span.hypnosisEnlighten{
+    background-position: -320px -1140px;
+}
+/** 21、祈福者-祈祷-漫天祥云**/
+span.bless{
+    background-position: -640px 0;
+}
+span.blessEnlighten{
+    background-position: -640px -60px;
+}
+/** 22、屌丝-信仰-信仰不灭**/
+span.belief{
+    background-position: -640px -120px;
+}
+span.beliefEnlighten{
+    background-position: -640px -180px;
+}
+/** 23、女神-光辉-无限光辉**/
+span.brilliance{
+    background-position: -640px -240px;
+}
+span.brillianceEnlighten{
+    background-position: -640px -300px;
+}
+/** 24、救世主-救世-日月新天**/
+span.redeem{
+    background-position: -640px -360px;
+}
+span.redeemEnlighten{
+    background-position: -640px -420px;
+}
+/** 25、仲裁者-裁决-一票否定**/
+span.arbitration{
+    background-position: -640px -480px;
+}
+span.arbitrationEnlighten{
+    background-position: -640px -540px;
+}
+/** 26、搏命家-下注-赢家之王**/
+span.gamble{
+    background-position: -640px -600px;
+}
+span.gambleEnlighten{
+    background-position: -640px -660px;
+}
+/** 27、阴谋家-诬陷-万夫所指**/
+span.frame{
+    background-position: -640px -720px;
+}
+span.frameEnlighten{
+    background-position: -640px -780px;
+}
+/** 28、革命家-牺牲-日月新光**/
+span.sacrifice{
+    background-position: -640px -840px;
+}
+span.sacrificeEnlighten{
+    background-position: -640px -900px;
+}
+/** 29、评论家-舆论-静默领域**/
+span.comment{
+    background-position: -640px -960px;
+}
+span.commentEnlighten{
+    background-position: -640px -1020px;
+}
+/** 30、千面人-汲取-万化无形**/
+span.change{
+    background-position: -640px -1080px;
+}
+span.changeEnlighten{
+    background-position: -640px -1140px;
+}
+/** 31、复仇者-玉碎-终极毁灭**/
+span.avenge{
+    background-position: -960px 0px;
+}
+span.avengeEnlighten{
+    background-position: -960px -60px;
+}
+/** 32、殇逝者-良知-祭奠-梦魇缠身**/
+span.conscienceFST{
+    background-position: -960px -120px;
+}
+span.conscienceSND{
+    background-position: -960px -180px;
+}
+span.conscienceEnlighten{
+    background-position: -960px -240px;
+}
+/** 33、引路人-明灯-心灵之光**/
+span.lead{
+    background-position: -960px -300px;
+}
+span.leadEnlighten{
+    background-position: -960px -360px;
+}
+/** 34、暗语者-私语-同仇敌忾**/
+span.argot{
+    background-position: -960px -420px;
+}
+span.argotEnlighten{
+    background-position: -960px -480px;
+}
+/** 35、天使-劝化-圣灵**/
+span.persuade{
+    background-position: -960px -540px;
+}
+span.persuadeEnlighten{
+    background-position: -960px -600px;
+}
+/** 36、恶魔-屠戮-魔体**/
+span.slaughter{
+    background-position: -960px -660px;
+}
+span.slaughterEnlighten{
+    background-position: -960px -720px;
+}
+/** 37、狼人-感染-圆月**/
+span.infect{
+    background-position: -960px -780px;
+}
+span.beast{
+     background-position: -960px -840px;
+}
+span.beastEnlighten{
+    background-position: -960px -900px;
+}
+/** 38、守财奴-贪婪-腰缠万贯**/
+span.greed{
+    background-position: -960px -960px;
+}
+span.greedEnlighten{
+    background-position: -960px -1020px;
+}
+/** 39、药剂师**/
+span.poison{
+    background-position: -960px -1080px;
+}
+span.poisonEnlighten{
+    background-position: -960px -1140px;
+}
+/** 40、神箭手**/
+span.bow{
+    background-position: -1280px 0;
+}
+span.bowEnlighten{
+    background-position: -1280px -60px;
+}
+/** 41、圣母**/
+span.rebound{
+    background-position: -1280px -120px;
+}
+span.turnHmn{
+    background-position: -1280px -180px;
+}
+span.sfzNirvana{
+    background-position: -1280px -240px;
+}
+/** 42、鬼僧**/
+span.blood{
+    background-position: -1280px -300px;
+}
+span.turnGst{
+    background-position: -1280px -360px;
+}
+span.grlNirvana{
+    background-position: -1280px -420px;
+}
+/** 43、驯兽师**/
+span.smell{
+    background-position: -1280px -480px;
+}
+span.smellEnlighten{
+    background-position: -1280px -540px;
+}
+
+
+
+

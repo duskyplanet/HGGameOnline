@@ -1,7 +1,7 @@
 var GameInfo = require("../../basicGameInfo/GameInfo");
 var hjcArr = require("../../../HJCUtils/HJCArray");
 var PlayerInfo = require("../../gameLogic/player").info;
-var endPrinter = require("../printManager/endPrinter").endPrinter;
+//var endPrinter = require("printManager/endPrinter").endPrinter;
 
 exports.endChecker = endChecker;
 function endChecker(game){
@@ -11,6 +11,7 @@ function endChecker(game){
     var gstNum = game.runningInfo.quickArr.survGstNum;
     var hmnNum = game.runningInfo.quickArr.survHmnNum;
     var alnNum = game.runningInfo.quickArr.survAlnNum;
+    var alreadySend = false;
     this.testPrinter = function(ttlNum,survivals,survNum,gstNum,hmnNum,alnNum){
         console.log("============endCheker做了一次结束检查：======");
         console.log("玩家总人数："+ttlNum);
@@ -23,10 +24,10 @@ function endChecker(game){
     if(game.runningInfo.timeInfo.leftEvenStep<=0) {
         if (alnNum > 0) {
             //外星人胜利
-            endPrinter(GameInfo.EndInfo.THD,game);
+            sendEnd(GameInfo.EndInfo.THD,game);
             return true;
         } else {
-            endPrinter(GameInfo.EndInfo.EVE,game);
+            sendEnd(GameInfo.EndInfo.EVE,game);
             return true;
         }
     }
@@ -34,19 +35,27 @@ function endChecker(game){
         var victoryNum = Math.floor(ttlNum/2);
         if(survNum<=victoryNum){
             //外星人胜利
-            endPrinter(GameInfo.EndInfo.THD,game);
+            sendEnd(GameInfo.EndInfo.THD,game);
         }else{
             return false;
         }
     }else{
         if(survivals.length <= 0) {
-            endPrinter(GameInfo.EndInfo.EVE,game);return true;
+            sendEnd(GameInfo.EndInfo.EVE,game);return true;
         }else if(hmnNum <=0 ){
-            endPrinter(GameInfo.EndInfo.GST,game);return true;
+            sendEnd(GameInfo.EndInfo.GST,game);return true;
         }else if(gstNum <=0 ){
-            endPrinter(GameInfo.EndInfo.HMN,game);return true;
+            sendEnd(GameInfo.EndInfo.HMN,game);return true;
         }else{
             return false;
         }
+    }
+    function sendEnd(vicParty){
+        if(alreadySend == true) return;
+        alreadySend  = true;
+        game.runningInfo.timeInfo.perid = game.runningInfo.timeInfo.PERID.END;
+        setTimeout(function(){
+            endPrinter(vicParty,game);
+        },1000);
     }
 }
