@@ -15,143 +15,6 @@ function exist(array,value){
     return false;
 }
 
-/** 删除数组中某值得元素
- * @params: array 对象数组
- * @params: value 属性
- * */
-exports.deleteValue = deleteValue;
-function deleteValue(array,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    for(var i = 0; i<array.length;i++){
-        if(value === array[i]) array.splice(i,1);
-    }
-    return array;
-}
-/** 删除数组中某些值的元素
- * @params: array 对象数组
- * @params: valueArr 删除属性的数组
- * @return: newArray
- * */
-exports.deleteValues = deleteValues;
-function deleteValues(array,valueArr){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    var newArr =[];
-    for(var i = 0; i<array.length;i++){
-        if(!exist(valueArr,array[i])){
-            newArr.push(array[i]);
-        }
-    }
-    return newArr;
-}
-
-/** 以循环方式洗牌(不改变原来的数组)
- * @params: array 对象数组
- * @return: 新的数组
- * */
-exports.circleShuffle = circleShuffle;
-function circleShuffle(array){
-    if(!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    var tempArr = array.concat(array);
-    var startIndex = Math.floor(Math.random() * (array.length + 1));
-    var resArr = [];
-    for(var i = 0; i<array.length;i++){
-        resArr.push(tempArr[startIndex]);
-        startIndex++;
-    }
-    return resArr;
-}
-
-/** 获得目标数组中元素出现的位置
- * @params: array 对象数组
- * @params: value 属性
- * @return: [] 所有下标位置
- * */
-exports.positions = positions;
-function positions(array,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    var res = [];
-    for(var i = 0; i<array.length;i++){
-        if(value == array[i]) res.push(i);
-    }
-    return res;
-}
-exports.firstPosition = firstPosition;
-function firstPosition(array,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    for(var i = 0; i< array.length ;i++){
-        if(value === array[i]) return i;
-    }
-    return -1;
-}
-
-/** 判断某个数组中是否全部是某个值
- * @params: array 对象数组
- * @params: value 值
- * @return: true or false
- * */
-exports.allValue = allValue;
-function allValue(array,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    for(var i = 0; i<array.length;i++){
-        if(value != array[i])
-        return false;
-    }
-    return true;
-}
-
-/** 判断某个数组中是否全部是某些值
- * @params: array 对象数组
- * @params: values 值数组
- * @return: true or false
- * */
-exports.allValues = allValues;
-function allValues(array,values){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)||!Array.isArray(values)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    for(var i = 0; i<array.length;i++){
-        if(exist(values,array[i])) continue;
-        return false;
-    }
-    return true;
-}
-
-/** 判断某个数组中是否全部不是某个值
- * @params: array 对象数组
- * @params: value 值
- * @return: true or false
- * */
-exports.allNotValue = allNotValue;
-function allNotValue(array,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 2 ||!Array.isArray(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    for(var i = 0; i<array.length;i++){
-        if(value === array[i])
-            return false;
-    }
-    return true;
-}
-
 /** 替换数组中的元素（无返回值，影响原数组）
  * @params: array 对象数组
  * @params: origin 被替换
@@ -329,44 +192,6 @@ function forEach(){
 /**获得对象数组中指定属性(本身)满足要求的对象数组（不影响原数组，项数会变）
  * @params: array 对象数组
  * @params: props 字符串数组，表明需要满足条件的属性
- * @params: value 数值
- * * @return: array 对象数组（如果属性不满足此项会丢失）
- * */
-exports.getObjByValue = getObjByValue;
-function getObjByValue(objArray,props,value){
-    var argArray = [].slice.apply(arguments);
-    if(argArray.length != 3 ||(!isEmpty(props)&&!Array.isArray(props))){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    var tempRes = [];
-    if(isEmpty(props)) {
-        tempRes = objArray.concat();
-    }else{
-        for(i = 0; i < objArray.length; i++){
-            var pro = objArray[i];
-            for(var level = 0; level < props.length; level++) {
-                pro = pro[props[level]];
-                if (pro === undefined){
-                    break;
-                }
-            }
-            tempRes.push(pro);
-        }
-    }
-    var result = [];
-    for(var i = 0; i < tempRes.length; i++){
-        if(tempRes[i] === undefined) continue;
-        try{
-           if(tempRes[i] === value) result.push(objArray[i]);
-        }catch(err){ throw new Error("HJCArray Error:无法执行的表达式");}
-    }
-    return result;
-}
-
-
-/**获得对象数组中指定属性(本身)满足要求的对象数组（不影响原数组，项数会变）
- * @params: array 对象数组
- * @params: props 字符串数组，表明需要满足条件的属性
  * @params: exp 表达式
  * @return: array 对象数组（如果属性不满足此项会丢失）
  * */
@@ -380,14 +205,14 @@ function objects(objArray,props,exp){
     if(isEmpty(props)) {
         tempRes = objArray.concat();
     }else{
-        for(i = 0; i < objArray.length; i++){
+        for(var i = 0; i < objArray.length; i++){
             var pro = objArray[i];
             for(var level = 0; level < props.length; level++) {
                 pro = pro[props[level]];
                 if (pro == undefined){
                     break;
                 }
-            }
+            };
             tempRes.push(pro);
         }
     }
@@ -447,17 +272,8 @@ function values(objArray,props,exp){
     return result;
 }
 
-/** 判断对象是否为空
- *  当对象为null,undefined,空字符串，空数组时返回true
- *  否则返回false
- * **/
-exports.isEmpty = isEmpty;
 function isEmpty(obj){
-    if( obj === undefined || obj === null || obj === ""){
-        return true;
-    }else if(Array.isArray(obj)){
-        if(obj.length === 0) return true;
-    }
+    if(obj==undefined||obj==null||obj=="") return true;
     return false;
 }
 
@@ -466,13 +282,14 @@ function isEmpty(obj){
  * */
 exports.shuffle = shuffle;
 function shuffle(array){
-    if(!isEmpty(array)){
-        for(var i = array.length - 1; i; i--){
-            var temp, random = parseInt(Math.random() * i);
-            temp = array[i];
-            array[i] = array[random];
-            array[random] = temp;
-        }
+    if(isEmpty(array)){
+        throw new Error("HJCArray Error:错误的参数形式");
+    }
+    for(var i = array.length - 1; i; i--){
+        var temp, random = parseInt(Math.random() * i);
+        temp = array[i];
+        array[i] = array[random];
+        array[random] = temp;
     }
 }
 
@@ -487,24 +304,6 @@ function reverse(array){
     array.reverse();
 }
 
-/**数字数组排序（从小到大，影响原数组，无返回值）
- * @params: array 对象数组
- * */
-exports.numSort = numSort;
-function numSort(array){
-    if(isEmpty(array)){
-        throw new Error("HJCArray Error:错误的参数形式");
-    }
-    array.sort(function(v1,v2){
-        if(v1<v2) return -1;
-        if(v1>v2) return 1;
-        return 0;
-    });
-}
-//arr =[1];
-//numSort(arr);
-//console.log(arr);
-
 /**根据对象数组的指定属性严格自然排序(影响原数组，无返回值)
  * @params: array 对象数组
  * @params: props 字符串数组，表明需要排序的属性
@@ -514,10 +313,10 @@ function sortByPrpStrict(array,props){
     if(isEmpty(array)||isEmpty(props)||!Array.isArray(props)){
         throw new Error("HJCArray Error:错误的参数形式");
     }
-    array.sort(compareStrict(props));
+    array.sort(compareScrict(props));
 }
 
-function compareStrict(props){
+function compareScrict(props){
     return function(Object1,Object2){
         var v1 = Object1;
         var v2 = Object2;
@@ -553,7 +352,7 @@ function sortByPrp(array,props){
     }
     var returnArr = [];
     var compProps = [];
-    outer:for( i=0; i<array.length;i++) {
+    outer:for(var i=0; i<array.length;i++) {
         var compProp = array[i];
         for (var level = 0; level < props.length; level++) {
             compProp = compProp[props[level]];
@@ -587,26 +386,26 @@ function compare(compProps){
  * Test
  */
 //Test data
-var testNumArray =[5,6,8,1,2,3,9];
-var testStrArray =["China","Japan","America"];
-var testObjArray = [
-    {   name:"Wang Er",
-        body:{ height :100, weight:"50kg"},
-        age:18
-    },
-    {   name:"Zhang San",
-        body:{ height :1, weight:"71kg"},
-        age:19
-    },
-    {   name:"Li si",
-        body:{ heightX :200, weight:"54kg"},
-        age:20
-    },
-    {   name:"Undefined Property",
-        body:{ height :150, weight:"50kg"},
-        age:22
-    }
-];
+//var testNumArray =[5,6,8,1,2,3,9];
+//var testStrArray =["China","Japan","America"];
+//var testObjArray = [
+//    {   name:"Wang Er",
+//        body:{ height :100, weight:"50kg"},
+//        age:18
+//    },
+//    {   name:"Zhang San",
+//        body:{ height :1, weight:"71kg"},
+//        age:19
+//    },
+//    {   name:"Li si",
+//        body:{ heightX :200, weight:"54kg"},
+//        age:20
+//    },
+//    {   name:"Undefined Property",
+//        body:{ height :150, weight:"50kg"},
+//        age:22
+//    }
+//];
 
 ////Test for values()
 //console.log(values(testObjArray,"",""));
@@ -649,21 +448,12 @@ var testObjArray = [
     //console.log(values(testObjArray,["body","height"],"++item")); //请将++写在item之前
 
 //Test for objects()
-//      console.log(testNumArray);
-//      console.log(testStrArray);
-//      console.log(testObjArray);
-//      console.log(objects(testNumArray,"","item%2==1"));  //无属性定义时，对元素本身进行操作
-//      console.log(objects(testStrArray,["unDfnPrp"],""));
-//      console.log(objects(testObjArray,["body","height"],"item==100")); //请将++写在item之前
-
-//Test for getObjByValue()
-//      console.log(testNumArray);
-//      console.log(testStrArray);
-//      console.log(testObjArray);
-//      console.log(objects(testNumArray,"","item%2==1"));  //无属性定义时，对元素本身进行操作
-//      console.log(objects(testStrArray,["unDfnPrp"],""));
-//        var H = 100;
-//      console.log(getObjByValue(testObjArray,["body","height"],H));
+    //  console.log(testNumArray);
+    //  console.log(testStrArray);
+    //  console.log(testObjArray);
+    //  console.log(objects(testNumArray,"","item%2==1"));  //无属性定义时，对元素本身进行操作
+    //  console.log(objects(testStrArray,["unDfnPrp"],""));
+    //  console.log(objects(testObjArray,["body","height"],"item>=100")); //请将++写在item之前
 
 //Test for fill()
     //  console.log(fill(10,10);
@@ -676,10 +466,3 @@ var testObjArray = [
     //    console.log(arr);
     //    swap(arr,1,100);
     //    console.log(arr);
-
-//Test for deleteValues()
-//var a = 1;
-//var sur = [1,2,3,4,5,6];
-//var al = [3,4,9];
-//var re = deleteValues(sur,al.concat([a]));
-//console.log(re);

@@ -68,16 +68,6 @@ function getAllocateResult(params){
     allocateJobs(params);
     //step5：分配阵营
     allocateParties();
-    //step6：返回分配结果
-    return{
-        ttlNum:ttlNum,
-        hmnNum:hmnNum,
-        gstNum:gstNum,
-        alnNum:alnNum,
-        wwfNum:wwfNum,
-        partyList:partyList,
-        jobList:jobList
-    }
 }
 //参数合法性检查
 function validCheck(params){
@@ -117,13 +107,14 @@ function decidePartyNum(params,alnExist,wwfExist){
         alnNum = 1;
     }
     if(wwfExist){
-        if(restNum <= 8){
+        console.log(restNum);
+        if(restNum <= 7){
             wwfNum = 1;
-        }else if(restNum <= 12){
+        }else if(restNum <= 10){
             wwfNum = 2;
-        }else if(restNum <= 19){
+        }else if(restNum <= 16){
             wwfNum = 3;
-        }else if(restNum >= 20){
+        }else if(restNum > 16){
             wwfNum  = 4;
         }else{
             console.log("Allocate错误：可上场狼族人数不合法...");
@@ -150,6 +141,8 @@ function decidePartyNum(params,alnExist,wwfExist){
         console.log("Allocate错误：剩余可分配人数不合法...");
     }
     hmnNum = restNum - gstNum;
+    //TODO
+    console.log(hmnNum+":"+gstNum+":"+alnNum+":"+wwfNum);
 }
 //分配职业
 function allocateJobs(params){
@@ -169,6 +162,11 @@ function allocateJobs(params){
             }
         }
     }
+    //TODO
+    console.log("mustTurnUpJobs");
+    console.log(mustTurnUpJobs);
+    console.log("randomTurnUpJobs");
+    console.log(randomTurnUpJobs);
    //然后决定上场职业表
    if(mustTurnUpJobs.length >= ttlNum){
         jobAppList = mustTurnUpJobs.splice(0,ttlNum);
@@ -191,13 +189,13 @@ function allocateJobs(params){
     if(params.singleJob === true){
         //单职业模式下
         for(i = 0;i<wantJobs.length;i++){
-            var wantJob = wantJobs[i];
+            var wantJob = params.jobWantList[i];
             if(gb.utils.hjcArr.exist(jobAppList,wantJob)){
                 //所有参选者
                 var positions = gb.utils.hjcArr.positions(params.jobWantList,wantJob);
                 gb.utils.hjcArr.shuffle(positions);
                 var position = positions[0];
-                gb.utils. hjcArr.deleteValue(jobAppList,wantJob);
+                gb.utils. hjcArr.deleteValue(jobAppList,params.jobWantList);
                 jobList[position] = wantJob;
             }
         }
@@ -208,10 +206,10 @@ function allocateJobs(params){
             if(gb.utils.hjcArr.exist(jobAppList,wantJob)){
                 //所有参选者
                 positions = gb.utils.hjcArr.positions(params.jobWantList,wantJob);
-                var JobInfo = gb.GameInfo.JobInfo;
+                var getJobId = gb.GameInfo.JobInfo.getJobId;
                 gb.utils. hjcArr.deleteValue(jobAppList,wantJob);
                 //必须单职业
-                if(wantJob === JobInfo.getJobId("agl") || wantJob === JobInfo.getJobId("dmn") || wantJob === JobInfo.getJobId("grl") || wantJob === JobInfo.getJobId("sfz") || wantJob === JobInfo.getJobId("psr")){
+                if(wantJob === getJobId("agl") || wantJob === getJobId("dmn") || wantJob === getJobId("grl") || wantJob === getJobId("sfz") || wantJob === getJobId("psr")){
                     gb.utils.hjcArr.shuffle(positions);
                     position = positions[0];
                     jobList[position] = wantJob;
@@ -228,7 +226,6 @@ function allocateJobs(params){
     gb.utils.hjcArr.shuffle(nulls);
     var nextNull = 0;
     for(i=0;i<jobAppList.length;i++){
-        if(nextNull+1 >= nulls.length) break;
         jobList[nulls[nextNull]] = jobAppList[i];
         nextNull++;
     }
@@ -271,22 +268,30 @@ function allocateParties(){
     gb.utils.hjcArr.shuffle(nulls);
     var nextPos = 0;
     for(i = 0; i < restGstNum; i++){
-        partyList[nulls[nextPos]] = gb.GameInfo.PartyInfo.GST;
-        nextPos++;
-    }
-    for(i = 0; i < restHmnNum; i++){
         partyList[nulls[nextPos]] = gb.GameInfo.PartyInfo.HMN;
         nextPos++;
     }
-}
-
-exports.allocatePrinter = allocatePrinter;
-function allocatePrinter(allocateRes){
-    console.log("==========数量分配结果==========");
-    console.log("总共"+allocateRes.ttlNum+"名玩家：人类（"+allocateRes.hmnNum+"）、鬼（"+allocateRes.gstNum+"）、外域（"+allocateRes.alnNum+"）、狼族（"+allocateRes.wwfNum+"）...");
-    console.log("========阵营/职业分配结果=======");
-    for(var i = 0; i < allocateRes.ttlNum; i++){
-        console.log((i+1)+"号（"+gb.GameInfo.PartyInfo.getPartyNameByNum(allocateRes.partyList[i])+"-"+gb.GameInfo.JobInfo.getJobNameById(allocateRes.jobList[i])+"）");
+    for(i = 0; i < restHmnNum; i++){
+        partyList[nulls[nextPos]] = gb.GameInfo.PartyInfo.GST;
+        nextPos++;
     }
 }
 
+//for test
+var params = {
+    ttlNum :8,
+    jobTurnUpList:[],          //本局游戏“可以上场”的职业列表
+    jobForcedList:[],         //本局游戏在“可以上场的前提下必须上场”的职业列表
+    jobWantList:[],            //本局游戏在“可以上场的前提下玩家的职业申请”的列表
+    alnType:1,                  //外星人登场情况：0不登场，1随机，2必上场
+    wwfType:1,                   //狼族登场情况：0不上场，1随机，2必不上场
+    singleJob:true              //单职业模式
+};
+
+getAllocateResult(params);
+console.log("-----数量分配结果-----");
+console.log("总人数："+ttlNum+"：人类（"+hmnNum+"）、鬼（"+gstNum+"）、外域（"+alnNum+")、狼族（"+wwfNum+")");
+console.log("-----阵营分配结果-----");
+console.log(partyList);
+console.log("-----职业分配结果-----");
+console.log(jobList);
