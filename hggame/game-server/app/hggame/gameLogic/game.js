@@ -109,18 +109,23 @@ function Game(roomInfo,pusher){
             thisNgtInfoSenderBuffer:[],   //这个夜晚的成功信息获取技能推送队列
             thisDawnEffectSenderBuffer:[],//这个黎明的技能发动启动通知
             thisDayCanSpeak:[],     //这个白天中可以发言者（survivals子集）
-            saveTimes:[],           //按照id排列的预留发言时间的数组                                       →[initArrays中初始化]
-            saveAuto:[],             //按照id排列的是否自动启动预留时间的数组                               →[initArrays中初始化]
+            saveTimes:[],           //按照id排列的预留发言时间的数组                                       →[initArrays中初始化]//TODO 貌似不要了
+            saveAuto:[],             //按照id排列的是否自动启动预留时间的数组                               →[initArrays中初始化]//TODO 貌似不要了
+            saveAutoArrByPos:[],    //☆按照玩家pos排列的饱和数组，true代表采用了自动保存，false代表未采用自动保存，null表示不存在玩家
+            saveTimeArrByPos:[],    //☆按照玩家pos排列的饱和数组，数值代表玩家现在拥有的预留时间，null表示不存在玩家
             dayJobInfo:{targetsPosArr:[],infoArr:[]}      //信息类职业白天获得的信息
         },
         fleshInfo:{
             lastNgtOutInfoHtml:"",     //上一个夜晚出局的信息
             dawnGlobalInfoHtml:"",       //这个黎明的全局提示信息
             ngtAlnOut:false,              //☆夜晚有外星人出局，黎明需要先机判断（已刷新）
-            delayGuess:false               //☆开枪环节有外星人出局，需要进行延迟猜词（已刷新）
+            delayGuess:false,               //☆开枪环节有外星人出局，需要进行延迟猜词（已刷新）
+            thisDaySpeakPos:-1,              //☆这个白天发言已经到了几号？（已刷新）
+            thisDaySpeakJumpers:[]          //☆这个白天因为特殊原因本来能发言却被踢出发言队列的人，如被复仇者玉碎的人（已经刷新）
         },
         listenArr:{             //流程相关监听队列
-            speakOverArr:[],        //这个白天玩家是否发言结束队列(由玩家外部请求)
+            speakOverArr:[],        //这个白天玩家是否发言结束队列(由玩家外部请求)//TODO 貌似不要了
+            thisDaySpeakConditionByPos:[],    //☆这个白天的玩家发言情况，饱和数组，其中为true的代表已经发言完毕。
             shootToArr:[] ,         //开枪玩家行动队列 //TODO 貌似不要了（直接删除lastNgtCanShoot中的元素）
             voteToArr:[],            //投票队列
             nextPKOver:false,       //下一位PK发言结束
@@ -149,7 +154,8 @@ function Game(roomInfo,pusher){
             trigBlessForThisNgt:false,  //[祈祷]成功在黑夜发动
             blessEnlighten:false,        //[祈祷]是否受到启迪
             trigSaveForThisNgt:false,   //[救世]成功在黑夜发动
-            trigSaveForThisDay:false   //[救世]成功在白天发动
+            trigSaveForThisDay:false,   //[救世]成功在白天发动
+            trigJudgeForThisDay:false  //[审判]成功在白天发动
         }
     };
     /**步骤一：初始化基本数组**/
@@ -164,11 +170,13 @@ function Game(roomInfo,pusher){
                 self.runningInfo.gamerTargets.push(self.initInfo.initTargets[i]);
                 self.runningInfo.ttlPlayerNum++;
                 self.runningInfo.quickArr.positionList.push(i);
-                self.runningInfo.fleshArr.saveAuto.push(false);
+                self.runningInfo.fleshArr.saveAutoArrByPos.push(false);
+                self.runningInfo.fleshArr.saveTimeArrByPos(self.initInfo.timers.defaultSave);
                 self.runningInfo.fleshArr.thisDayCanSpeak.push(i);
-                self.runningInfo.fleshArr.saveTimes.push(self.initInfo.timers.defaultSave);
                 self.runningInfo.playerExistList[i] = true;
             }else{
+                self.runningInfo.fleshArr.saveAutoArrByPos.push(null);
+                self.runningInfo.fleshArr.saveTimeArrByPos(null);
                 self.runningInfo.quickArr.nickList[i] = null;
                 self.runningInfo.playerExistList[i] = false;
             }

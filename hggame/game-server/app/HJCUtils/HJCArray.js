@@ -1,3 +1,37 @@
+/** 将一个数组的指定元素(第一个找到的)循环到开头
+ * @params: arr 对象数组
+ * @params: shouldBeFirst 应该在开头的元素的值
+ * @return: newArr 排序好的数组
+ * */
+exports.circleToHead = circleToHead;
+function circleToHead(arr,shouldBeFirst){
+    var argArray = [].slice.apply(arguments);
+    if(argArray.length != 2 ||!Array.isArray(arr)){
+        throw new Error("HJCArray Error:错误的参数形式");
+    }
+    var index = -1;
+    for(var i = 0; i<arr.length;i++){
+        if(arr[i]===shouldBeFirst){
+            index = i;
+            break;
+        }
+    }
+    if(index===-1){
+        console.log("HJCArray Error:该数组并不含此值");
+    }
+    var newArr = [];
+    for(i = index; i< arr.length;i++){
+        newArr.push(arr[i]);
+    }
+    for(i = 0; i< index;i++){
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+//test
+//arr = [2,3,4,5,7,8,923,12,3,4,5,7];
+//console.log(circleToHead(arr,923));
+
 /** 判断数组是否含有元素
  * @params: array 对象数组
  * @params: value 属性

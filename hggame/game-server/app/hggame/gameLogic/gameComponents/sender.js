@@ -103,8 +103,12 @@ exports.Sender = function Sender(game){
             info);
     };
 
-    //向room推送发言开始信息
+    //提醒所有玩家某个玩家发言
+    //@params content：提醒内容 turnPos：发言玩家
     this.onTurn = function(content,turnPos) {
+        //TODO
+        testPrint(turnPos+content,"所有人");
+        return;
         var info = {
             route: "onTurn",
             msg: {content: ColorHelper.colorHtml(ColorHelper.COLORS.ON_TURN,content),turnPos:turnPos},

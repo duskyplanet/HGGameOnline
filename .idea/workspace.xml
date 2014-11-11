@@ -2,202 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f2246c8-2783-4f8c-84a5-31c3ddf525e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hggame/game-server/app/test/testForGameManagers/testForAllocation.js" />
-      <change type="DELETED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\alloctManager\alloctManager.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\test\ngtCalcTest.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\test\testForGameManagers\testForAllocation.js" afterPath="" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.gitignore" afterPath="$PROJECT_DIR$/hggame/.gitignore" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\.idea.iml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/.idea.iml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\.name" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/.name" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\misc.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/misc.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\modules.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hggame/.idea/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\.name" afterPath="$PROJECT_DIR$/hggame/.idea/.name" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\chatofpomelo-websocket-master.iml" afterPath="$PROJECT_DIR$/hggame/.idea/chatofpomelo-websocket-master.iml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hggame/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\misc.xml" afterPath="$PROJECT_DIR$/hggame/.idea/misc.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\modules.xml" afterPath="$PROJECT_DIR$/hggame/.idea/modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hggame/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hggame/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hggame/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\README.md" afterPath="$PROJECT_DIR$/hggame/README.md" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\.name" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/.name" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\game-server.iml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/game-server.iml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/jsLibraryMappings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\libraries\game_server_node_modules.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/libraries/game_server_node_modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\misc.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/misc.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\modules.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hggame/game-server/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app.js" afterPath="$PROJECT_DIR$/hggame/game-server/app.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\HJCArray.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCArray.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\HJCMap.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCMap.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\HJCQ.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCQ.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\HJCTimer.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCTimer.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\basicUtils.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/basicUtils.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\routeUtil.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/routeUtil.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\HJCUtils\speakMonitor.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/speakMonitor.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\db_service\dao.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/db_service/dao.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\db_service\db_config\db_connector.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/db_service/db_config/db_connector.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\db_service\db_config\mysql_config.json" afterPath="$PROJECT_DIR$/hggame/game-server/app/db_service/db_config/mysql_config.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\db_service\service.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/db_service/service.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\db_service\sqlMap\user.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/db_service/sqlMap/user.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\basicGameInfo\ColorHelper.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/basicGameInfo/ColorHelper.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\basicGameInfo\GameInfo.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/basicGameInfo/GameInfo.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\game.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/game.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\endChecks\endChecks.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/endChecks/endChecks.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\flesher.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/flesher.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\glbTools.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/glbTools.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\alienGuessLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/alienGuessLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\dawnLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/dawnLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\nightLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/nightLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\saverSaveLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/saverSaveLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\shootLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/shootLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\speakLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\loops\voteLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/voteLoop.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\receiver.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/receiver.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\recorder.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/recorder.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameComponents\sender.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\gameManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameLogic\player.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/player.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\calcManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/calcManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\endChecker.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/endChecker.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\jumpDayChecker.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/jumpDayChecker.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\nightCalc.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/nightCalc.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\nightJobsLogics.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/nightJobsLogics.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\nightSkillsProcessor.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/nightSkillsProcessor.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\shootCalc.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/shootCalc.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\calcManager\voteCalc.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/calcManager/voteCalc.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\endManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\jobCheckers\jobCheckers.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/jobCheckers/jobCheckers.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\jobsManager\SkillsManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/jobsManager/SkillsManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\jobsManager\jobsManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/jobsManager/jobsManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\msgManager\msgTranslator.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/msgManager/msgTranslator.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\printManager\endPrinter.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/printManager/endPrinter.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\specialLoopers\specialLoopers.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/specialLoopers/specialLoopers.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\wordsManager\wordsDB\fun.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/wordsManager/wordsDB/fun.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\wordsManager\wordsDB\history.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/wordsManager/wordsDB/history.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\wordsManager\wordsDB\phrase.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/wordsManager/wordsDB/phrase.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\gameManagers\wordsManager\wordsManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/wordsManager/wordsManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\global.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/global.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\hallLogic\hallManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/hallLogic/hallManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\hallLogic\roomsListUtils.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/hallLogic/roomsListUtils.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\roomLogic\roomsInfoManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/roomLogic/roomsInfoManager.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\roomLogic\roomsMapUtils.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/roomLogic/roomsMapUtils.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\hggame\roomLogic\seatsListUtils.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/roomLogic/seatsListUtils.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\connector\handler\entryHandler.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/connector/handler/entryHandler.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\gate\handler\gateHandler.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/gate/handler/gateHandler.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\hall\handler\hallHandler.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/hall/handler/hallHandler.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\hall\remote\hallRemote.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/hall/remote/hallRemote.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\room\handler\roomHandler.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/room/handler/roomHandler.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\servers\room\remote\roomRemote.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/servers/room/remote/roomRemote.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\util\dispatcher.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/util/dispatcher.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\app\util\routeUtil.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/util/routeUtil.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\HGGameConfig.js" afterPath="$PROJECT_DIR$/hggame/game-server/config/HGGameConfig.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\adminServer.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/adminServer.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\adminUser.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/adminUser.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\clientProtos.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/clientProtos.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\dictionary.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/dictionary.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\log4js.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/log4js.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\master.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/master.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\serverProtos.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/serverProtos.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\servers.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/servers.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\config\servers1.json" afterPath="$PROJECT_DIR$/hggame/game-server/config/servers1.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\logs\pomelo.log.1" afterPath="$PROJECT_DIR$/hggame/game-server/logs/pomelo.log.1" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\logs\pomelo.log.2" afterPath="$PROJECT_DIR$/hggame/game-server/logs/pomelo.log.2" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\logs\pomelo.log.3" afterPath="$PROJECT_DIR$/hggame/game-server/logs/pomelo.log.3" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\logs\pomelo.log.4" afterPath="$PROJECT_DIR$/hggame/game-server/logs/pomelo.log.4" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\logs\pomelo.log.5" afterPath="$PROJECT_DIR$/hggame/game-server/logs/pomelo.log.5" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\package.json" afterPath="$PROJECT_DIR$/hggame/game-server/package.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\game-server\pstart.bat" afterPath="$PROJECT_DIR$/hggame/game-server/pstart.bat" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\npm-install.bat" afterPath="$PROJECT_DIR$/hggame/npm-install.bat" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\npm-install.sh" afterPath="$PROJECT_DIR$/hggame/npm-install.sh" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\.name" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/.name" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/jsLibraryMappings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\libraries\web_server_node_modules.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/libraries/web_server_node_modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\misc.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/misc.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\modules.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/modules.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\web-server.iml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/web-server.iml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hggame/web-server/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\app.js" afterPath="$PROJECT_DIR$/hggame/web-server/app.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\bin\component.bat" afterPath="$PROJECT_DIR$/hggame/web-server/bin/component.bat" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\bin\component.sh" afterPath="$PROJECT_DIR$/hggame/web-server/bin/component.sh" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\package.json" afterPath="$PROJECT_DIR$/hggame/web-server/package.json" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\css\HGFrame.css" afterPath="$PROJECT_DIR$/hggame/web-server/public/css/HGFrame.css" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\css\base.css" afterPath="$PROJECT_DIR$/hggame/web-server/public/css/base.css" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\css\jobs.css" afterPath="$PROJECT_DIR$/hggame/web-server/public/css/jobs.css" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\css\others.css" afterPath="$PROJECT_DIR$/hggame/web-server/public/css/others.css" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\background\aniBorder.gif" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/background/aniBorder.gif" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\background\cloud.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/background/cloud.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\background\headBack.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/background/headBack.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\background\hggame_buttons.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/background/hggame_buttons.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\background\logo.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/background/logo.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\allJobs.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/allJobs.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_1.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_1.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_10.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_10.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_11.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_11.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_12.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_12.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_13.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_13.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_14.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_14.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_15.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_15.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_16.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_16.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_17.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_17.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_18.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_18.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_19.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_19.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_2.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_2.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_20.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_20.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_21.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_21.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_22.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_22.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_23.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_23.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_24.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_24.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_25.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_25.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_26.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_26.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_27.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_27.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_28.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_28.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_29.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_29.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_3.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_3.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_30.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_30.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_31.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_31.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_32.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_32.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_33.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_33.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_34.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_34.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_35.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_35.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_36.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_36.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_37.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_37.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_38.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_38.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_39.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_39.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_4.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_4.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_40.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_40.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_41.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_41.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_42.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_42.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_43.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_43.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_5.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_5.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_6.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_6.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_7.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_7.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_8.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_8.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\jobPic_9.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/jobPic_9.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\job_basicInfo.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/job_basicInfo.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\job_titles.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/job_titles.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\jobs\skills.jpg" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/jobs/skills.jpg" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\others\rule_word.gif" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/others/rule_word.gif" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\others\rules_buttons.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/others/rules_buttons.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\others\rules_pix.png" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/others/rules_pix.png" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\images\rule_word.gif" afterPath="$PROJECT_DIR$/hggame/web-server/public/images/rule_word.gif" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\index.html" afterPath="$PROJECT_DIR$/hggame/web-server/public/index.html" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\js\JQ.js" afterPath="$PROJECT_DIR$/hggame/web-server/public/js/JQ.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\js\effects.js" afterPath="$PROJECT_DIR$/hggame/web-server/public/js/effects.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\js\frame.js" afterPath="$PROJECT_DIR$/hggame/web-server/public/js/frame.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\js\gameInfo.js" afterPath="$PROJECT_DIR$/hggame/web-server/public/js/gameInfo.js" />
-      <change type="MOVED" beforePath="D:\HGgameBase\HGGameOnline\chatofpomelo-websocket-master\web-server\public\js\ruleAndIntro.js" afterPath="$PROJECT_DIR$/hggame/web-server/public/js/ruleAndIntro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/voteOutLoop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCArray.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/game.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/hggame/global.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js" afterPath="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HGGameOnline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -220,21 +33,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="speakLoop.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="speakLoop.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3192">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.78409094" vertical-offset="1132" max-vertical-offset="3363">
+              <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+              <folding>
+                <element signature="e#46#74#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sender.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.344828" vertical-offset="1914" max-vertical-offset="7011">
+              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simpleTest.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="global.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/global.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="voteOutLoop.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/voteOutLoop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="endManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shootLoop.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/shootLoop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1843">
+              <caret line="64" column="9" selection-start-line="61" selection-start-column="7" selection-end-line="64" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simpleTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hggame/game-server/app/test/simpleTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32977304" vertical-offset="0" max-vertical-offset="749">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -243,8 +108,8 @@
       <file leaf-file-name="ngtCalcTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="1824">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -259,6 +124,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCArray.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/global.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/voteOutLoop.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/game.js" />
+        <option value="$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -388,6 +267,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HGGameOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HGGameOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hggame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HJCUtils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -567,8 +472,23 @@
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="Node.js.simpleTest.js">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HGgameBase\HGGameOnline\hggame\game-server\app\hggame\gameLogic\gameComponents\loops" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.ngtCalcTest.js">
     <configuration default="false" name="simpleTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="simpleTest.js" working-dir="$PROJECT_DIR$/hggame/game-server/app/test">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ngtCalcTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="ngtCalcTest.js" working-dir="$PROJECT_DIR$/hggame/game-server/app/test">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HJCArray.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="HJCArray.js" working-dir="$PROJECT_DIR$/hggame/game-server/app/HJCUtils">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
@@ -614,12 +534,16 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.simpleTest.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.ngtCalcTest.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.HJCArray.js" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.simpleTest.js" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.ngtCalcTest.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.HJCArray.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.simpleTest.js" />
       </list>
     </recent_temporary>
   </component>
@@ -637,7 +561,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -647,7 +571,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15982722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3027027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -679,27 +603,87 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js">
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/test/simpleTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3192">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/shootLoop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1843">
+          <caret line="64" column="9" selection-start-line="61" selection-start-column="7" selection-end-line="64" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameManagers/endManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/voteOutLoop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hggame/game-server/app/test/ngtCalcTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="1824">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/test/simpleTest.js">
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/HJCUtils/HJCArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32977304" vertical-offset="0" max-vertical-offset="749">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.24025974" vertical-offset="4089" max-vertical-offset="14079">
+          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0278746" vertical-offset="1785" max-vertical-offset="16758">
+          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/sender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.344828" vertical-offset="1914" max-vertical-offset="7011">
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hggame/game-server/app/hggame/gameLogic/gameComponents/loops/speakLoop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78409094" vertical-offset="1132" max-vertical-offset="3363">
+          <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+          <folding>
+            <element signature="e#46#74#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

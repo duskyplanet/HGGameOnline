@@ -6,158 +6,169 @@ var gb = require("../../../global").global;
  */
 exports.speakLoop = function speakLoop(game){
     game.runningInfo.timeInfo.period = game.runningInfo.timeInfo.PERIOD.SPEAK;
-    var SPKL= this;
+    var SP= this;
     var timers = game.initInfo.timers;
-    SPKL.step1();
-    SPKL.step1 = function(){
-        if(SPKL.tools.jumpDayCheck(game)){
-            game.sender.onInfo("notice","游戏只剩下两人未结束，且无人拥有改变白天局势的技能，游戏跳过发言和公决阶段，直接进入黑夜…");
-            game.runningInfo.timeInfo.leftEvenStep --;
-            var endCheck = gb.endCheck.evenCheck(game);
-            if(endCheck.isEnd){
-                gb.endManager(game,endCheck.winParty);
-            }else{
-                gb.loops.nightLoop(game);
-            }
+    SP.step1();
+    //step1:是否需要跳过白天发言
+    SP.step1 = function(){
+        //跳过白天
+        if(SP.tools.jumpDayCheck(game)){
+            setTimeout(function(){
+                game.sender.onInfo("notice","游戏只剩下两人未结束，且无人拥有改变白天局势的技能，游戏跳过发言和公决阶段，直接进入黑夜…");
+                game.runningInfo.timeInfo.leftEvenStep --;
+                var endCheck = gb.endCheck.evenCheck(game);
+                if(endCheck.isEnd){
+                    gb.endManager(game,endCheck.winParty);
+                }else{
+                    gb.loops.nightLoop(game);
+                }
+            },timers.tick*1000);
         }else{
-            if(SPKL.tools.jumpSpeakCheck(game)){
-                game.sender.onInfo("notice","存活玩家均被禁言，游戏直接进入公决阶段…");
-                gb.loops.voteLoop(game);
-            }else{
-                var survivals = game.runningInfo.quickArr.survivals;
-                var frbSpeakers = game.runningInfo.fleshArr.thisDayFrbSpeak;
-                var frbInfo = frbSpeakers.length===0?(""):(frbSpeakers.join("、")+"号被[催眠]禁止发言，");
-                var firstSpeakerPos = survivals[Math.floor(Math.random() * (survivals.length + 1))];
-                var info = "本轮"+frbInfo+"从"+firstSpeakerPos+"号开始轮询发言…";
-                game.sender.onInfo("notice",info);
-                setTimeout(function(){
-                    SPKL.step2(game,firstSpeakerPos);
-                },timers.gap*2000);
-            }
+            setTimeout(function(){
+                if(SP.tools.jumpSpeakCheck(game)){
+                    game.sender.onInfo("notice","存活玩家均被禁言，游戏直接进入公决阶段…");
+                    gb.loops.voteLoop(game);
+                }else{
+                    var survivals = game.runningInfo.quickArr.survivals;
+                    var frbSpeakers = game.runningInfo.fleshArr.thisDayFrbSpeak;
+                    var frbInfo = frbSpeakers.length===0?(""):(frbSpeakers.join("、")+"号被[催眠]禁止发言，");
+                    var firstSpeakerPos = survivals[Math.floor(Math.random() * (survivals.length + 1))];
+                    var info = "本轮"+frbInfo+"从"+firstSpeakerPos+"号开始轮询发言…";
+                    game.sender.onInfo("notice",info);
+                    setTimeout(function(){
+                        SP.step2(game,firstSpeakerPos);
+                    },timers.gap*1000);
+                }
+            },timers.tick*1000);
         }
     };
-    SPKL.step2 = function(game,firstSpeakerPos){
-
-
-        var sendByTurn = setInterval(function(){
-
+    //发言监听器
+    SP.step2 = function(game,firstSpeakerPos){
+        //刷新数据
+        game.runningInfo.fleshInfo.thisDaySpeakPos = -1;
+        game.runningInfo.fleshInfo.thisDaySpeakJumpers = [];
+        game.runningInfo.listenArr.thisDaySpeakConditionByPos = SP.tools.buildConditions(game);
+        //发言推送器
+        SP.tools.sendSpeakHint(game,firstSpeakerPos);
+        var speakTurner = setInterval(function(){
+            var nextPos = SP.tools.findNextSpeaker(game.runningInfo.fleshArr.thisDayCanSpeak,game.runningInfo.fleshInfo.thisDaySpeakPos,game.runningInfo.fleshInfo.thisDaySpeakJumpers,firstSpeakerPos);
+            if(nextPos!== -1){
+                SP.tools.sendSpeakHint(game,nextPos);
+                launchWaiter(nextPos);
+            }else{
+                clearInterval(speakTurner);
+            }
         },timers.defaultSpeak*1000);
 
-        function findNext(firstSpeakerPos,lastSpeakerPos,game){
-            sur
+        var jumpDayChecker = setInterval(function(){
+            if(game.runningInfo.glbEvent.trigJudgeForThisDay === true){
+                game.runningInfo.glbEvent.trigJudgeForThisDay = false;
+                stopAllWaiter();
+                gb.loops.voteLoop(game,gb.loops.voteOutType.fromJudge);
+            }
+        },timers.tick*1000);
+
+        var endGameChecker = setInterval(function(){
+            if(game.runningInfo.timeInfo.perid === game.runningInfo.timeInfo.PERIOD.END){
+                stopAllWaiter();
+            }
+        },timers.tick*1000);
+
+        var allOverChecker = setInterval(function(){
+            if(gb.utils.hjcArr.allValues(game.runningInfo.listenArr.thisDaySpeakConditionByPos,[null,true])){
+                stopAllWaiter();
+            }
+            gb.loops.voteLoop(game,gb.loops.voteLoop(game));
+        },timers.tick*1000);
+
+       function stopAllWaiter(){
+            clearInterval(speakTurner);
+            clearInterval(jumpDayChecker);
+            clearInterval(allOverChecker);
+            clearInterval(endGameChecker)
         }
 
-        var listenSpeakOverArr = [];
-        for(var i = 0; i< speakerNum; i++){
-            self.runningInfo.listenArr.speakOverArr.push(false);  //玩家主动发起的是否发言已经结束(黑夜时已经刷新) //用于监听
-            listenSpeakOverArr.push(false);                       //服务器监听的是否每个玩家最长发言时间已到        //用于计算
-        }
-        var canSpeakTimeArr = [];                                 //发言者队列不用预留所能发言的最长时间
-        for(var j = 0; j< speakerNum; j++){
-            canSpeakTimeArr.push(self.initInfo.timers.defaultSpeak+j*self.initInfo.timers.nextTurn);
-        }
-        //发言
-        this.sendNext = function(speakId){
-            //测试通过：推送某个玩家的发言提示
-            console.log("测试(push所有玩家):"+speakId+"号玩家请发言...");
-            self.sender.onTurn(speakId+"号玩家请发言...",speakId);
-        };
-        var nextOne = 0;//下一位发言者在speakers中的下标；
-        that.sendNext(speakers[nextOne]);
-        //依次发言
-        this.sendLooper = setInterval(function(){
-            nextOne = nextOne + 1;
-            if(nextOne < speakers.length){
-                that.sendNext(speakers[nextOne]);
-            }else{
-                clearInterval(that.sendLooper);
-            }
-        },self.initInfo.timers.nextTurn*1000);
-        //每个玩家发言时间已到监听器
-        var passTime = 0;
-        this.everySpkEndWaiter = setInterval(function(){
-            passTime += self.initInfo.timers.tick;
-            for(var i = 0;i<speakers.length;i++){
-                var speakerId = self.quickQuery.getIdByPosition(speakers[i]);
-                if(listenSpeakOverArr[i] === true){continue;}                                                          //时间已到
-                if( self.runningInfo.listenArr.speakOverArr[speakerId]===true) { listenSpeakOverArr[i]=true;continue;}          //玩家自己结束，时间已到
-                if(passTime>=canSpeakTimeArr[i]){   //基本时间已到
-                    if(self.runningInfo.fleshArr.saveAuto[speakerId]===false){
-                        listenSpeakOverArr[i]=true;     //未启用预留，时间已到
+       function launchWaiter(nextPos){
+            setTimeout(function(){
+                if(game.runningInfo.listenArr.thisDaySpeakConditionByPos[nextPos]===false){
+                    if(game.runningInfo.fleshArr.saveAutoArrByPos[nextPos] ===false){
+                        game.runningInfo.listenArr.thisDaySpeakConditionByPos[nextPos] = true;
                     }else{
-                        //预留时间也到了
-                        if(passTime>=(canSpeakTimeArr[i]+self.runningInfo.fleshArr.saveTimes[speakerId])){
-                            listenSpeakOverArr[i]=true;
-                            self.runningInfo.fleshArr.saveAuto[speakerId] = true;
-                            self.runningInfo.fleshArr.saveTimes[speakerId] = 0;
-                        }
+                        setTimeout(function(){
+                            game.runningInfo.listenArr.thisDaySpeakConditionByPos[nextPos] = true;
+                        }, game.runningInfo.fleshArr.saveTimeArrByPos[nextPos]*1000)
                     }
                 }
-            }
-        },self.initInfo.timers.tick*1000);
-        //发言环节结束监听器
-        var a = 0;
-        this.spkTimeEndWaiter = setInterval(function(){
-            //测试用：
-            if(a==5){console.log("发言完结数组"+listenSpeakOverArr);console.log("预留时间数组"+self.runningInfo.fleshArr.saveTimes); a=0;}
-            a++;
-            if(hjcArr.allValue(listenSpeakOverArr,true)&&self.runningInfo.dayEvent.fstAid === false){
-                that.nextStep("normal");
-            }
-        },self.initInfo.timers.tick*1000);
-        //监听跳过白天事件和急救事件
-        var aidPushed = false;
-        this.jmpDayListener = setInterval(function(){
-            if(self.runningInfo.loopFlag.jmpDay === true){
-                that.nextStep("judge");
-            }
-//                if(self.runningInfo.dayEvent.fstAid === true){
-//                    //推送(TODO)
-//                    console.log("***监听到急救...");
-//                    var aidId = self.runningInfo.dayEvent.fstAidId;
-//                    if(aidPushed===false&&passTime>=(speakerNum*self.initInfo.timers.defaultSpeak)){
-//                        //推送(TODO)
-//                        console.log("被救起的aidId号玩家请发言...");
-//                        aidPushed = true;
-//                    }
-//                }
-        },self.initInfo.timers.tick*1000);
-
+            },timers.defaultSpeak*1000);
+       }
     };
-    SPKL.tools ={
+    SP.tools = {
         //跳过白天：场上只剩下两名玩家，且游戏没有结束，且没有能够有白天发动的技能。
-        jumpDayCheck:function(game){
+        jumpDayCheck: function (game) {
             var survivals = game.runningInfo.quickArr.survivals;
-            if(survivals.length !== 2 ) return false;
-            if(game.runningInfo.glbEvent.trigMemorial) return true;
+            if (survivals.length !== 2) return false;
+            if (game.runningInfo.glbEvent.trigMemorial) return true;
             var playerA = survivals[0];
             var playerB = survivals[1];
             //两者中有人被[催眠]/[诬陷]
-            if(playerA.onMeFlags.isHypnosisVote || playerA.onMeFlags.isFramed || playerB.onMeFlags.isHypnosisVote || playerB.onMeFlags.isFramed) return false;
+            if (playerA.onMeFlags.isHypnosisVote || playerA.onMeFlags.isFramed || playerB.onMeFlags.isHypnosisVote || playerB.onMeFlags.isFramed) return false;
             //两者中有未发动技能的指挥官
             var cmdId = gb.GameInfo.JobInfo.getJobId("cmd");
-            if((playerA.myJob === cmdId && !playerA.myJobFlags.isAuthorUsed)||(playerB.myJob === cmdId && !playerB.myJobFlags.isAuthorUsed)) return false;
+            if ((playerA.myJob === cmdId && !playerA.myJobFlags.isAuthorUsed) || (playerB.myJob === cmdId && !playerB.myJobFlags.isAuthorUsed)) return false;
             //两者中有未发动技能的大主教
             var bsp = gb.GameInfo.JobInfo.getJobId("bsp");
-            if((playerA.myJob === bsp && !playerA.myJobFlags.isJudgeUsed)||(playerB.myJob === bsp && !playerB.myJobFlags.isJudgeUsed)) return false;
+            if ((playerA.myJob === bsp && !playerA.myJobFlags.isJudgeUsed) || (playerB.myJob === bsp && !playerB.myJobFlags.isJudgeUsed)) return false;
             //两者中有未发动技能的治愈者
             var dctId = gb.GameInfo.JobInfo.getJobId("dctId");
-            if((playerA.myJob === bsp && !playerA.myJobFlags.isCureUsed)||(playerB.myJob === bsp && !playerB.myJobFlags.isCureUsed)) return false;
+            if ((playerA.myJob === bsp && !playerA.myJobFlags.isCureUsed) || (playerB.myJob === bsp && !playerB.myJobFlags.isCureUsed)) return false;
             //两者中有未发动技能的复仇者
             var avg = gb.GameInfo.JobInfo.getJobId("avg");
-            if((playerA.myJob === bsp && !playerA.myJobFlags.isAvengeUsed)||(playerB.myJob === bsp && !playerB.myJobFlags.isAvengeUsed)) return false;
+            if ((playerA.myJob === bsp && !playerA.myJobFlags.isAvengeUsed) || (playerB.myJob === bsp && !playerB.myJobFlags.isAvengeUsed)) return false;
             //两者中有仲裁者
             var arb = gb.GameInfo.JobInfo.getJobId("arb");
             return !( playerA.myJob === bsp || playerB.myJob === bsp );
         },
 
         //场上玩家全部被禁言
-        jumpSpeakCheck:function(game){
+        jumpSpeakCheck: function (game) {
             var survivals = game.runningInfo.quickArr.survivals;
             var thisDayFrbSpeak = game.runningInfo.fleshArr.thisDayFrbSpeak;
-            return survivals === thisDayFrbSpeak;
-        }
+            return survivals.length === thisDayFrbSpeak.length;
+        },
 
-        //findNextSpeaker(survivals,)
+        //推送发言提示
+        sendSpeakHint: function (game, pos) {
+            game.runningInfo.fleshInfo.thisDaySpeakPos = pos;
+            game.sender.onTurn("请发言", pos);
+        },
+
+        //寻找下一个发言者
+        findNextSpeaker: function (speakArr, thisPos, jumpers, firstPos) {
+            var speakArrThisTime = gb.utils.hjcArr.circleToHead(speakArr, firstPos);
+            speakArrThisTime = gb.utils.hjcArr.deleteValues(speakArrThisTime, jumpers);
+            for (var i = 0; i < speakArrThisTime.length; i++) {
+                if (thisPos === speakArrThisTime[i] && i < (speakArrThisTime.length - 1)) {
+                    if (gb.utils.hjcArr.exist(jumpers, speakArrThisTime[i + 1])) continue;
+                    return speakArrThisTime[i + 1];
+                }
+            }
+            return -1;
+        },
+
+        //构建白天发言情况监听器数组
+        buildConditions: function (game) {
+            var returnArr = [];
+            for(var i = 0; i<game.runningInfo.playerExistList.length;i++){
+                if(game.runningInfo.playerExistList[i] === true){
+                    returnArr.push(false);
+                }returnArr.push(null);
+            }
+            for(i = 0; i<returnArr.length;i++){
+                if(gb.utils.hjcArr.exist(game.thisDayCanSpeak,i)){
+                    returnArr[i] = false;
+                } returnArr[i] =true;
+            }
+            return returnArr;
+        }
     }
 };

@@ -3,6 +3,12 @@ exports.global = {
         dawnLoop:require("./gameLogic/gameComponents/loops/dawnLoop").dawnLoop,
         nightLoop:require("./gameLogic/gameComponents/loops/nightLoop").nightLoop,
         voteLoop:require("./gameLogic/gameComponents/loops/voteLoop").voteLoop,
+        voteOutLoop:require("./gameLogic/gameComponents/loops/voteOutLoop").voteOutLoop,
+        voteOutType:{
+            fromVote:1,
+            fromPK:2,
+            fromJudge:3
+        },
         saverSaveLoop:require("./gameLogic/gameComponents/loops/saverSaveLoop").saverSaveLoop,
         shootLoop:require("./gameLogic/gameComponents/loops/shootLoop").shootLoop,
         saverSaveType:{

@@ -32,8 +32,8 @@ var testRoomInfo = {
         picMode:0
     }
 };
-var g = new Game(testRoomInfo,null);
-console.log(g);
+//var g = new Game(testRoomInfo,null);
+//console.log(g);
 //g.launchSkill("路人2",2,1);
 //g.launchSkill("黄达斯",2,9);
 //g.launchSkill("路人9",1,1);
@@ -52,3 +52,40 @@ console.log(g);
 
 
 //calcNgt(g);
+arr =[2,3,4,7,8,9,10,12];
+time = 1000;
+var thisPos = -1;
+function launchSpeak(arr,firstPos){
+    sendSpeak(firstPos);
+    var inter = setInterval(function(){
+        var nextPos = findNextPos(arr,thisPos,jumpers,firstPos);
+        if(nextPos!== -1){
+            sendSpeak(nextPos);
+        }else{
+            clearInterval(inter);
+        }
+    },time);
+}
+
+function sendSpeak(pos){
+    thisPos = pos;
+    console.log(pos);
+}
+
+jumpers = [];
+
+function findNextPos(speakArr,thisPos,jumpers,firstPos){
+    var speakArrThisTime = hjcArr.circleToHead(speakArr,firstPos);
+    speakArrThisTime =  hjcArr.deleteValues(speakArrThisTime,jumpers);
+    for(var i = 0;i< speakArrThisTime.length;i++){
+        if(thisPos === speakArrThisTime[i] && i< (speakArrThisTime.length-1)){
+            if(hjcArr.exist(jumpers,speakArrThisTime[i+1])) continue;
+            return speakArrThisTime[i+1];
+        }
+    }return -1;
+}
+
+setTimeout(function(){jumpers.push(9);},3000);
+setTimeout(function(){arr.push(11);},3000);
+
+launchSpeak(arr,3);
